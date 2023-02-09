@@ -1,0 +1,86 @@
+:root {
+    --light: #ffffff;
+    --semilight: #455c65;
+    --dark: #000000;
+  }
+
+  @font-face {
+    font-family: stretchPro;
+    src: url(StretchPro.otf);
+  }
+
+  @font-face {
+    font-family: barlow;
+    src: url(Barlow-SemiBold.ttf);
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: barlow;
+    src: url(Barlow-Regular.ttf);
+    font-weight: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+h1 {
+    font-family: stretchPro, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding-bottom: 1.5rem
+}
+
+p {
+    font-family: barlow, Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+header {
+    width: 100vw;
+    height: auto;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    padding: 4rem;
+}
+
+main div > div:nth-of-type(1) {
+    float: left;
+}
+
+main div > div:nth-of-type(2) {
+    float: right;
+}
+
+main .text {
+    width: 50%;
+}
+
+main .section-image {
+    width: 45%;
+}
+
+main .section-image img{
+    width: 100%;
+}
+
+main .section-image p{
+    padding: 1rem;
+    color: var(--semilight);
+    font-size: 1rem;
+}

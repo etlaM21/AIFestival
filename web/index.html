@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FESTIVAL OF AI ART</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="/banner_01.png"></imgA>
+        <img style="display: none" src="/banner_02.png"></imgA>
+    </header>
+    <main>
+        <div id="introduction">
+            <div class="text">
+                <h1 class="hascii">Introducction</h1>
+                <p>
+                    The Filmuniversity Babelsberg in Potsdam will be hosting a one-day festival to showcase AI art. The festival aims to celebrate the use of AI in all forms of artistic expression, including films, artworks, and music. This festival will be a platform for artists to showcase their work and to engage in a discussion about the role of AI in the creative process.
+                </p><p>
+                    The festival will highlight the ways in which AI is used to create new and innovative works, and how it can serve as a tool for artists to push the boundaries of what is possible. By focusing on the creative potential of AI, the festival hopes to shift the conversation away from debates about whether or not AI should be used in the arts, and instead to a discussion about how it can be used to create works that are meaningful and impactful.
+                </p><p>
+                    With a lineup of some of the most innovative AI artists, the festival will provide a space for attendees to experience the cutting-edge of technology and the arts. Through workshops, panel discussions, and demonstrations, attendees will have the opportunity to learn about the latest developments in AI and its impact on the creative process.
+                </p><p>
+                    This festival will be a unique and exciting opportunity to explore the relationship between AI and art, and to celebrate the many ways in which artists are using this powerful tool to create works that are truly innovative and thought-provoking. So mark your calendars and join us at the Filmuniversity Babelsberg in Potsdam to celebrate the intersection of AI and art.
+                </p>
+            </div>
+            <div class="section-image">
+                <div id="pic01"> </div>
+                <img src="01.png" style="display: none">
+                <p><b>DALL-E2</b> <i>4k daytime photograph of a modern gallery space with different sized screens showcasing works from artists that were created with an AI</i></p>
+                </div>
+        </div>
+        <div id="structure">
+            <div class="section-image">
+                <div id="pic02"> </div>
+                <img src="02.webp" style="display: none">
+                <p><b>Craiyon</b> <i>A grid showcasing different artworks by AI in a variety of styles</i></p>
+            </div>
+            <div class="text">
+                <h1 class="hascii">Strructure</h1>
+                <p>
+                    The one-day festival at the Filmuniversity Babelsberg in Potsdam will showcase AI art in two categories:
+                </p><p>
+                    <b>AI DREAMS</b> and <b>AI MADE</b>.
+                </p><p>
+                    For the <b>AI DREAMS</b>  category, artists are invited to submit works that are inspired by AI powered creations. This category is open to all forms of artistic expression, including movies, visuals, and installations, and the AIs used can range from image generators to text generators to pattern recognizers.
+                </p><p>
+                    The <b>AI MADE</b> category is for works that have been created, at least partially, by AI. To submit for this category, artists must provide a detailed description of the role that AI played in the creation of their work, and all works must have a strong connection to the topic of AI used in the arts.
+                </p><p>
+                    A committee will review all submissions to ensure that the works meet the criteria for exhibition. This will ensure that the festival showcases the best of AI art and celebrates the many ways in which artists are using AI to push the boundaries of what is possible in the arts.
+                </p><p>
+                    So, if you're an artist working with AI, or just someone who is interested in the intersection of technology and art, be sure to submit your work to the festival and join us in celebrating the many ways in which AI is changing the face of the arts.
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="hascii.js"></script>
+    <script src="imageNoiser.js"></script>
+    <script>
+        document.getElementsByTagName("header")[0].onclick = () => {
+            let images = document.getElementsByTagName("header")[0].getElementsByTagName("img");
+            for(let i = 0; i < images.length; i++){
+                images[i].style.display == "none" ? images[i].style.display = "block" : images[i].style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
