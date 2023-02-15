@@ -107,16 +107,17 @@ void main()
    // float direction = perlinNoise( uv.xy, seed ) * TWO_PI * 8.0;
    // float directionNew = (perlinNoise( uv.xy, seed ) - 0.5) * 2.0;
     float directionNew =  cnoise( vec3(uv.xy, givenSeed) )  * 5.0;
-    //float offsetX = uv.x + sin(direction) * timeLeft / 500.0;
-    //float offsetY = uv.y + cos(direction) * timeLeft / 500.0;
-    float offsetX = uv.x + directionNew * timeLeft / 5.0;
-    float offsetY = uv.y + directionNew * timeLeft / 5.0;
+    float offsetX = uv.x + sin(directionNew) * timeLeft / 25.0;
+    float offsetY = uv.y + cos(directionNew) * timeLeft / 25.0;
+    // float offsetX = uv.x + directionNew * timeLeft / 5.0;
+    //float offsetY = uv.y + directionNew * timeLeft / 5.0;
     //offsetY = offsetY + directionNew * abs(distance(iMouse.y, fragCoord.y));
     
     vec2 texCoord = vec2( offsetX, offsetY );
 
     vec4 color = vec4(0.0,0.0,0.0,1.0);    
-    if(texCoord.x > timeLeft && texCoord.x < abs(timeLeft-1.0) && texCoord.y > timeLeft && texCoord.y < abs(timeLeft-1.0)) color = texture2D(image, texCoord);
+    if(abs(distance(texCoord.xy, vec2(0.5, 0.5)) - 1.0) > timeLeft*25.0) color = texture2D(image, texCoord);
+    // if(texCoord.x > timeLeft && texCoord.x < abs(timeLeft-1.0) && texCoord.y > timeLeft && texCoord.y < abs(timeLeft-1.0)) color = texture2D(image, texCoord);
     
     // Output to screen
     gl_FragColor = color;
